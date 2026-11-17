@@ -1587,7 +1587,7 @@ dependencies = [
  "emath",
  "epaint_default_fonts",
  "font-types",
- "harfrust",
+ "harfrust 0.12.0",
  "log",
  "nohash-hasher",
  "parking_lot",
@@ -1659,7 +1659,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
 dependencies = [
  "libc",
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -1819,9 +1819,9 @@ checksum = "77ce24cb58228fbb8aa041425bb1050850ac19177686ea6e0f41a70416f56fdb"
 
 [[package]]
 name = "font-types"
-version = "0.12.5"
+version = "0.12.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b8eb065f3251655b3c90e22e5e363f310fc5332fb3402e37bbc94752283248f6"
+checksum = "835ae9d781464a79026cde387f9cbc650c9a4909d7cf7e658b127e3c35d2f35d"
 dependencies = [
  "bytemuck",
 ]
@@ -2514,8 +2514,21 @@ checksum = "c03d949a14aa089bbb282f7dd76a498a7f684428e4257202efc119ec010376f9"
 dependencies = [
  "bitflags 2.13.2",
  "bytemuck",
- "read-fonts",
+ "read-fonts 0.41.0",
  "smallvec",
+]
+
+[[package]]
+name = "harfrust"
+version = "0.16.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "741c9cd8fb2f39c393366b9cf13e8c31ad6adbbd9d817f0a18fe47cff36a3cca"
+dependencies = [
+ "bitflags 2.13.2",
+ "bytemuck",
+ "read-fonts 0.47.0",
+ "smallvec",
+ "yoke 0.8.3",
 ]
 
 [[package]]
@@ -3200,7 +3213,7 @@ name = "lightcraft-engine"
 version = "0.6.0"
 dependencies = [
  "ab_glyph",
- "harfrust",
+ "harfrust 0.16.0",
  "libc",
  "lightcraft-catalog",
  "lightcraft-codecs",
@@ -3662,7 +3675,7 @@ dependencies = [
  "objc2-foundation 0.3.2",
  "png",
  "thiserror 2.0.21",
- "windows-sys 0.60.2",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -4996,6 +5009,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "read-fonts"
+version = "0.47.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a39d2f8f681030a7bcbbcf3e8568775ac2393afd51401a2e2133ee89e3953897"
+dependencies = [
+ "bytemuck",
+ "foldhash",
+ "font-types",
+ "once_cell",
+ "smallvec",
+ "yoke 0.8.3",
+]
+
+[[package]]
 name = "reborrow"
 version = "0.5.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5168,7 +5195,7 @@ dependencies = [
  "errno",
  "libc",
  "linux-raw-sys 0.12.1",
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -5481,7 +5508,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "819ab7d62b1d3e72d9d9dea5650bac30424f9111364bb94928dbf5ecad1baa68"
 dependencies = [
  "bytemuck",
- "read-fonts",
+ "read-fonts 0.41.0",
 ]
 
 [[package]]
@@ -5702,7 +5729,7 @@ dependencies = [
  "getrandom 0.4.3",
  "once_cell",
  "rustix 1.1.5",
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -5901,7 +5928,7 @@ checksum = "f2f6fb2847f6742cd76af783a2a2c49e9375d0a111c7bef6f71cd9e738c72d6e"
 dependencies = [
  "memoffset",
  "tempfile",
- "windows-sys 0.60.2",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -6489,7 +6516,7 @@ version = "0.1.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22"
 dependencies = [
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
